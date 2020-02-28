@@ -3,9 +3,22 @@
 <%= form_for @heroine do |f| %>
   <p>Enter Name: <%= f.text_field :name, placeholder: "Name" %></p>
   <p>Enter Super Name: <%= f.text_field :super_name, placeholder: "Super Name" %></p>
-  <p>Power: <%= f.collection_select :power, @powers, :id, :description%></p>
+  <p>Power: <%= f.collection_select :powers, @powers, :upcase, :downcase%></p>
+ <%= f.submit %>
+<%end%>
+<% if @heroine.errors.any? %>
+  <ul>
+  <% @heroine.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+  <ul>
+  <% end %>
 
-  <%= f.submit %>
-  <% end%>
+
+  
+
+
 
 
