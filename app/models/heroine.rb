@@ -10,4 +10,14 @@ class Heroine < ApplicationRecord
     
     Heroine.new.errors[:super_name].any?
     Heroine.create.errors[:super_name].any?
+
+    def heroine_name
+        if Heroine.name == nil
+          errors.add(:name, "Heroine needs a name.")
+        elsif
+            Heroine.super_name == nil
+            errors.add(:super_name, "Heroine needs a super name.")
+        else
+            "Heroine created"
+        end
 end

@@ -16,6 +16,7 @@
   <%= f.label 'Super Name' %>
   <%= f.text_field :super_name %>
   <br/>
+  <%= f.collection_select(:power_id, Power.all, :id, :name, prompt: true) %>
   <%= f.submit %>
 <% end %>
 
