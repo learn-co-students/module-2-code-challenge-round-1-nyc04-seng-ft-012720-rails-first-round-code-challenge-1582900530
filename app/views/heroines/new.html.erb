@@ -1,7 +1,5 @@
 <h2>New Heroine</h2>
-
-
-<%= form_for @heroine do f %>
+<%= form_for @heroine do |f| %>
 <ul>
    <li>
    <%= f.text_field :name %>
@@ -9,13 +7,16 @@
    <li>
    <%= f.text_field :super_name %>
    </li>
+   <li>
+   <%= select_tag(:power_id, options_for_select(@powers_array)) %>
+   </li>
 </ul>
-<p align="left"><%= f.submit %></p>
+<h5>      <%= f.submit %></h5>
 <% end %>
 <hr>
 <% if @heroine.errors.any? %>
   <div id="error_explanation">
-    <h3><%= "#{@heroine.errors.count} error/s ") %> prohibited this article from being saved:</h3>
+    <h3><%= "#{@heroine.errors.count} error/s " %> prohibited this article from being saved:</h3>
     <ul>
     <% @heroine.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>

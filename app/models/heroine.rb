@@ -3,7 +3,7 @@ class Heroine < ApplicationRecord
   has_many :powers, through: :heroine_powers
 
 
-  validate :name, presence: true
-  validate :super_name, presence: true
+  validates :name, presence: true
+  validates :super_name, presence: true
 
 end
