@@ -20,4 +20,5 @@ class Heroine < ApplicationRecord
         else
             "Heroine created"
         end
+    end
 end
