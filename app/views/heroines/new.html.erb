@@ -10,6 +10,11 @@
     <%= f.text_field :super_name %>
     <br>
     <br>
+    <%
+=begin%>
+ <%= f.collection_select(:heroine_id, @powers, :id, :name) %> 
+<%
+=end%>
     <%= f.submit %>
 <% end %>
 <br>
