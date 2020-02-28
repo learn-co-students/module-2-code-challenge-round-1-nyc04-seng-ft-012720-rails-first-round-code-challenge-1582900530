@@ -3,8 +3,22 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine_path(heroine) %>
     </li>
     <br>
   <% end %>
 </ul>
+
+<%= form_for Heroine.new do |f| %>
+  <%= f.label 'Name' %>
+  <%= f.text_field :name %>
+  <br/>
+  <%= f.label 'Super Name' %>
+  <%= f.text_field :super_name %>
+  <br/>
+  <%= f.submit %>
+<% end %>
+
+
+
+
