@@ -1,0 +1,4 @@
+class HeroinePowersController < ApplicationController
+
+
+end
