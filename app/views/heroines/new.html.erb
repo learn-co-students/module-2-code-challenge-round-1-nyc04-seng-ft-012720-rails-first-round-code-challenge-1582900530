@@ -1,0 +1,11 @@
+<h1>Create a Superhero</h1>
+
+<%= form_for @heroine do |f| %>
+  <p>Enter Name: <%= f.text_field :name, placeholder: "Name" %></p>
+  <p>Enter Super Name: <%= f.text_field :super_name, placeholder: "Super Name" %></p>
+  <p>Power: <%= f.collection_select :power, @powers, :id, :description%></p>
+
+  <%= f.submit %>
+  <% end%>
+
+
