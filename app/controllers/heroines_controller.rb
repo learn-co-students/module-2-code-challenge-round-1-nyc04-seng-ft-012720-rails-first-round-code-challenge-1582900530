@@ -20,7 +20,6 @@ class HeroinesController < ApplicationController
     else
       render :new
     end
-    # HeroinePower.create(heroine_id: @heroine.id, power_id: powers[:id])
   end
 
   private
