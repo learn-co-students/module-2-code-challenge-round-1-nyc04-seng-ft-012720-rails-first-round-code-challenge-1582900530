@@ -5,7 +5,7 @@
     <li>
       <%= power.name %>
       <br>
-      Description: <%= power.description %>
+      <%= link_to power.description ,power_path(power.id) %>
     </li>
     <br>
   <% end %>
