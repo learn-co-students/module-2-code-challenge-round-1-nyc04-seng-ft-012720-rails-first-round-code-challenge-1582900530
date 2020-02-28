@@ -77,12 +77,12 @@ Each Heroine show page should include the:
 - name (eg. Kamala Khan)
 - super name (eg. Ms. Marvel) -->
 
-### 4. Power show page
+<!-- ### 4. Power show page
 
 Power show page should include the:
 
 - name
-- description
+- description -->
 
 ### 5. Heroine Create page
 
