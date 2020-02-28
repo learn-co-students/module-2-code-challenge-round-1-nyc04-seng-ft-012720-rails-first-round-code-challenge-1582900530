@@ -1,0 +1,22 @@
+<h2>Heroine Show Page</h2>
+<hr>
+<h3><%= "This the #{@heroine.super_name}'s Page"%>
+<br>  
+<ul>
+   <li>
+     <h4>Name:  <%= @heroine.name %></h4>
+   </li>
+   <li>
+     <h4>SuperName:  <%= @heroine.super_name %></h4>
+   </li>
+</ul>
+<hr>
+<h4>Our Super Heroine has the following SuperPowers</h4>
+
+<% @heroine.powers.each do |power|%>
+  <ul>
+     <li>
+        <%= power.name.capitalize %>
+     </li>
+  </ul>
+<% end %>
