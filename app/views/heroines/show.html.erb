@@ -1,7 +1,14 @@
 <ul>
 <li>name: <%= @heroine.name %></li>
 <li>super_name: <%= @heroine.super_name %></li>
+</ul>
 
-<ul>
+<h1>power></h1>
+
+<% @heroine.powers.each do |p| %>
+<%= p.name %>%
+
+<% end %>
+
 
 
