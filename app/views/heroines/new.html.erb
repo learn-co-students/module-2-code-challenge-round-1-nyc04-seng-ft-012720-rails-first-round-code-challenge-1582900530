@@ -1,15 +1,17 @@
 <h1>New Heroine</h1>
 
-<%= form_for heroine_powers_path(@heroine, @heroine_power
- ) do |f|%>
+<%= form_for @heroine do |f|%>
+    
     <%= f.label :name, "Name" %>
     <%= f.text_field :name %>
 
     <%= f.label :super_name, "Hero Name" %>
     <%= f.text_field :super_name %>
+    <%= f.fields_for :heroine_powers do |builder|%>
+    <%= builder.collection_select :power_id, @powers, :id, :name%>
+    <%= builder.hidden_field :heroine_id, value: :id%>
+    <%end%>
 
-    <%= f.collection_select :power_id, @powers, :id, :name%>
-    <%= f.hidden_field :heroine_id, value: @heroine%>
     <%= f.submit%>
 <%end%>
 <% #Next thing to solve: No route matches [POST] "/heroines/new"%>

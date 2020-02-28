@@ -18,6 +18,8 @@ class HeroinesController < ApplicationController
   def create
     @heroine = Heroine.new(heroine_params)
     if @heroine.save
+      params[:heroine][:heroine_powers][:heroine_id] = @heroine.id
+      @heroine_power = HeroinePower.create(power_id: params[:heroine][:heroine_powers][:power_id],heroine_id: params[:heroine][:heroine_powers][:heroine_id])
       redirect_to heroine_path(@heroine)
     else
       render 'new'
@@ -26,6 +28,6 @@ class HeroinesController < ApplicationController
 
   private
   def heroine_params
-    params.require(:heroine).permit(:name, :super_name)
+    params.require(:heroine).permit(:name, :super_name, :heroine_powers)
   end
 end
