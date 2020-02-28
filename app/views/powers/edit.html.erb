@@ -1,0 +1,25 @@
+UPDATE FUNCTIONALITY IN PROGRESS
+
+<%= form_with model: @power, url: powers_path do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+    <p>
+    <%= collection_select(@power, :heroine_id, Heroine.all, :id, :name) %>
+    </p>
+
+    <% if @power.errors.any? %>
+    <%= @power.errors.full_messages %>
+    <%end%>
+
+     <p>
+    <%= form.submit %>
+  </p>
+<% end %>
