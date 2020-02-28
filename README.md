@@ -19,9 +19,9 @@ Before you begin coding your solution, clone this repo and then `cd` into it. Th
 
 ## Domain
 
-There are three models in the domain: Power, Heroine, and a join model HeroinePower.
+<!-- There are three models in the domain: Power, Heroine, and a join model HeroinePower. -->
 
-Each Heroine can have multiple powers. Powers can belong to multiple Heroines.
+<!-- Each Heroine can have multiple powers. Powers can belong to multiple Heroines. -->
 
 ## What You Already Have
 

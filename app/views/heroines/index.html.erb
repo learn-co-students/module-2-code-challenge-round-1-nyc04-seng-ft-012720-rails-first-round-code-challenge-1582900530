@@ -1,4 +1,4 @@
-<h2>All Heroines</h2>
+<h2>All Heroines#index</h2>
 
 <ul>
   <% @heroines.each do |heroine| %>
@@ -6,5 +6,13 @@
       <%= heroine.super_name %>
     </li>
     <br>
-  <% end %>
+    <%= form_for :heroines do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field 'name'%>
+    <%= f.submit%>
+    <%end%>
+
+   <% link_to :show %>
+  
+  <%end%>
 </ul>
