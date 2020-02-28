@@ -7,6 +7,14 @@
       <br>
       Description: <%= power.description %>
     </li>
-    <br>
-  <% end %>
+<h4>This Super Power is an Ability of the following SuperHeroines</h4>
+     <% power.heroines.each do |heroine|%>
+     <ul>
+        <li>
+           <%= link_to heroine.super_name.capitalize, heroine %>
+        </li>
+     </ul>
+     <% end %>
+     <br>
+<% end %>
 </ul>

@@ -16,6 +16,7 @@ class HeroinesController < ApplicationController
         HeroinePower.create(heroine_id: @heroine.id, power_id: params[:power_id])
         redirect_to @heroine
      else
+        @powers_array = Power.pluck(:name, :id)
         render :new
      end
   end

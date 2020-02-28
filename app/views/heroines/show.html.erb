@@ -16,7 +16,7 @@
 <% @heroine.powers.each do |power|%>
   <ul>
      <li>
-        <%= power.name.capitalize %>
+        <%= link_to power.name.capitalize, power %>
      </li>
   </ul>
 <% end %>
