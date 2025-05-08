@@ -1,0 +1,10 @@
+<h1> Make a New Hero! </h1>
+
+<%= form_for @heroine do |f| %>
+     
+  <p> <%= f.text_field :name, placeholder: "name" %>
+  <p> <%= f.text_field :super_name, placeholder: "Superhero Name" %>
+      
+      
+   <%= f.submit %> 
+<% end %>
